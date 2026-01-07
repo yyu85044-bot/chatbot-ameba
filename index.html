@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャットボット</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: sans-serif; }
+        #chat-container { 
+            width: 100%; 
+            max-width: 600px; 
+            margin: 20px auto; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            overflow: hidden;
+        }
+        #messages { 
+            height: 400px; 
+            overflow-y: auto; 
+            padding: 20px; 
+            background: #f9f9f9; 
+        }
+        .message { 
+            margin-bottom: 15px; 
+            padding: 10px; 
+            border-radius: 8px; 
+            max-width: 80%; 
+        }
+        .user { background: #007bff; color: white; margin-left: auto; }
+        .bot { background: white; border: 1px solid #ddd; }
+        #input-area { 
+            display: flex; 
+            padding: 10px; 
+            background: white; 
+            border-top: 1px solid #ddd; 
+        }
+        #user-input { 
+            flex: 1; 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+        }
+        #send-btn { 
+            padding: 10px 20px; 
+            margin-left: 10px; 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+        }
+        #limit-info { 
+            text-align: center; 
+            padding: 10px; 
+            background: #f0f0f0; 
+            font-size: 14px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="limit-info">残り: <span id="remaining">15</span> / 15回</div>
+        <div id="messages"></div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="メッセージを入力...">
+            <button id="send-btn">送信</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>
